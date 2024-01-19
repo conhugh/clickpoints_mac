@@ -29,6 +29,7 @@ from io import StringIO
 from typing import List, Optional, Tuple, Union, Sequence
 
 import PIL
+from PIL import Image
 import imageio
 import numpy as np
 import peewee
@@ -39,7 +40,7 @@ from clickpoints.DataFile import DataFile
 from clickpoints.includes.ConfigLoad import dotdict
 
 # remove decompression bomb warning which is now an exception
-PIL.Image.MAX_IMAGE_PIXELS = None
+Image.MAX_IMAGE_PIXELS = None
 
 try:
     import openslide
